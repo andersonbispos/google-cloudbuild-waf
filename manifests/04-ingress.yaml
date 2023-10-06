@@ -3,10 +3,18 @@ kind: Ingress
 metadata:
   name: juice-shop
   annotations:
-    kubernetes.io/ingress.class: "gce"
     kubernetes.io/ingress.allow-http: "true"
     kubernetes.io/ingress.global-static-ip-name: "testelb-ip"
 spec:
+  defaultBackend:
+    http:
+      paths:
+      - path: /*
+        backend:
+          service:
+            name: juice-shop
+            port:
+              number: 80
   rules:
   - host: "teste-waf.34.160.180.135.nip.io"
     http:
