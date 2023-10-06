@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: juice-shop
+  annotations:
+    cloud.google.com/backend-config: '{"default": "my-backendconfig"}'    
+spec:
+  selector:
+    app: juice-shop
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: ClusterIP
