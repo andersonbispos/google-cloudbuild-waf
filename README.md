@@ -5,7 +5,11 @@
 ### dotnet samples
 
 https://github.com/GoogleCloudPlatform/dotnet-docs-samples
+
+### cloudbuild
+
 https://github.com/GoogleCloudPlatform/gke-gitops-tutorial-cloudbuild
+https://www.cloudskillsboost.google/quests/141
 
 ### cloud armor
 
